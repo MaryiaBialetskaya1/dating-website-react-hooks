@@ -8,8 +8,21 @@ export function Dating() {
   console.log(data[person]);
 
   return (
-    <div className={s.container}>
-      <h1>{name}</h1>
+    <div>
+      <div>
+        <img src={image} alt="person" width="400px" />
+      </div>
+      <div>
+        <h1>
+          {id} - {name}
+        </h1>
+      </div>
+      <div>
+        <h2>{description}</h2>
+      </div>
+      <div>
+        <h2>{age}</h2>
+      </div>
     </div>
   );
 }

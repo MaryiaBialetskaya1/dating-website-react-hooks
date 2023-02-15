@@ -27,22 +27,22 @@ export function Dating() {
   };
 
   return (
-    <div>
-      <div className={s.container}>
+    <div className={s.container}>
+      <div>
         <img src={image} alt="person" width="300px" />
       </div>
-      <div className={s.container}>
+      <div>
         <h1>
           {id} - {name}
         </h1>
       </div>
-      <div className={s.container}>
+      <div>
         <h2>{description}</h2>
       </div>
-      <div className={s.container}>
+      <div>
         <h2>{age} years old</h2>
       </div>
-      <div className={`${s.btn} ${s.container}`}>
+      <div className={`${s.btn}`}>
         <button onClick={showPeviousPerson}>Previous</button>
         <button onClick={showNextPerson}>Next</button>
       </div>

@@ -5,7 +5,26 @@ import s from "./Dating.module.css";
 export function Dating() {
   const [person, setPerson] = useState(0);
   const { id, name, description, age, image } = data[person];
-  console.log(data[person]);
+
+  const showPeviousPerson = () => {
+    setPerson((person) => {
+      person--;
+      if (person < 0) {
+        return data.length - 1;
+      }
+      return person;
+    });
+  };
+
+  const showNextPerson = () => {
+    setPerson((person) => {
+      person++;
+      if (person > data.length - 1) {
+        person = 0;
+      }
+      return person;
+    });
+  };
 
   return (
     <div>
@@ -24,8 +43,8 @@ export function Dating() {
         <h2>{age} years old</h2>
       </div>
       <div className={`${s.btn} ${s.container}`}>
-        <button>Previous</button>
-        <button>Next</button>
+        <button onClick={showPeviousPerson}>Previous</button>
+        <button onClick={showNextPerson}>Next</button>
       </div>
     </div>
   );

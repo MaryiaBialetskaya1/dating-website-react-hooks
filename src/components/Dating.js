@@ -9,19 +9,23 @@ export function Dating() {
 
   return (
     <div>
-      <div>
-        <img src={image} alt="person" width="400px" />
+      <div className={s.container}>
+        <img src={image} alt="person" width="300px" />
       </div>
-      <div>
+      <div className={s.container}>
         <h1>
           {id} - {name}
         </h1>
       </div>
-      <div>
+      <div className={s.container}>
         <h2>{description}</h2>
       </div>
-      <div>
-        <h2>{age}</h2>
+      <div className={s.container}>
+        <h2>{age} years old</h2>
+      </div>
+      <div className={`${s.btn} ${s.container}`}>
+        <button>Previous</button>
+        <button>Next</button>
       </div>
     </div>
   );
